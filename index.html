@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <!-- HOME ANIMATION SCRIPT -->
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+    ></script>
+    <!-- <script src="js/jquery.svg3dtagcloud.min.js"></script> -->
+    <!-- OWN SCRIPT -->
+    <script defer src="js/script.js"></script>
+
+    <title>MaX &mdash; Developing</title>
+  </head>
+  <body class="container">
+    <header class="sidebar">
+      <a href="#home" class="nav__link nav__link--1">
+        <span class="nav__link--text">Home</span>
+        <ion-icon
+          class="nav__link--icon icon--home"
+          name="home-outline"
+        ></ion-icon
+      ></a>
+      <a href="#about" class="nav__link nav__link--2">
+        <span class="nav__link--text">About</span>
+        <ion-icon
+          class="nav__link--icon icon--about"
+          name="newspaper-outline"
+        ></ion-icon
+      ></a>
+      <a href="#projects" class="nav__link nav__link--3">
+        <span class="nav__link--text icon--projects">Projects</span>
+        <ion-icon class="nav__link--icon" name="code-slash-outline"></ion-icon
+      ></a>
+      <span class="nav__span"
+        >&copy; <br />
+        MaX</span
+      >
+    </header>
+    <!-- HOME -->
+    <main class="main main--1" id="home">
+      <div class="home__animation" id="tag-cloud"></div>
+      <h2 class="heading2">My name is Marko and I'm a web developer</h2>
+      <p class="home__text">
+        I started my journey on Udemy, where I have learned all the basic and
+        advanced things about HTML5, CSS3, and Sass. A few months later I
+        continued my journey with the JavaScript course so I decided to create
+        something. If you are interested please go and see my
+        <a href="#projects" class="link link-projects">projects</a>, and also
+        don't forget to see my code on
+        <a href="https://github.com/max-developing" class="link">GitHub</a>!
+      </p>
+      <img src="img/1.jpg" alt="Myself image for CV" class="home__img" />
+      <div class="home__links">
+        <span class="home__span home__span--1">CV</span>
+        <a
+          href="/img/Marko Golubovic CV.pdf"
+          download
+          class="home__link home__link--1"
+        >
+          <ion-icon
+            class="home__icon home__icon--cv"
+            name="document-text-outline"
+          ></ion-icon>
+        </a>
+
+        <span class="home__span home__span--2">GitHub</span>
+        <a
+          href="https://github.com/max-developing"
+          class="home__link home__link--2"
+          target="_blank"
+        >
+          <ion-icon
+            class="home__icon home__icon--github"
+            name="logo-github"
+          ></ion-icon>
+        </a>
+        <span class="home__span home__span--3">LinkedIn</span>
+        <a
+          href="https://www.linkedin.com/in/marko-golubovi%C4%87-716138188/"
+          class="home__link home__link--3"
+          target="_blank"
+        >
+          <ion-icon
+            class="home__icon home__icon--linkedin"
+            name="logo-linkedin"
+          ></ion-icon>
+        </a>
+      </div>
+    </main>
+    <!-- ABOUT -->
+    <div class="main main--2" id="about" style="display: none">
+      <div class="slider__links">
+        <button class="btn slider__btn btn--active" data-slide="0">
+          Hiking
+        </button>
+        <button class="btn slider__btn" data-slide="1">Nature</button>
+        <button class="btn slider__btn" data-slide="2">Table-tennis</button>
+        <button class="btn slider__btn" data-slide="3">Roller-skates</button>
+        <button class="btn slider__btn" data-slide="4">PES</button>
+        <button class="btn slider__btn" data-slide="5">Motorcycling</button>
+      </div>
+      <div class="slider__imgContainer">
+        <div class="slider__slide">
+          <img
+            class="slider__img"
+            src="img/about/hiking.jpg"
+            alt="View from the Rtanj mountain"
+          />
+        </div>
+
+        <div class="slider__slide">
+          <img
+            class="slider__img"
+            src="img/about/nature.jpg"
+            alt="My friends and I on Grza"
+          />
+        </div>
+
+        <div class="slider__slide">
+          <img
+            class="slider__img"
+            src="img/about/table-tennis.jpg"
+            alt="Outdoor Table-tennis image"
+          />
+        </div>
+
+        <div class="slider__slide">
+          <img
+            class="slider__img"
+            src="img/about/roller-skates.jpg"
+            alt="My Roller-skates @ Ada"
+          />
+        </div>
+
+        <div class="slider__slide">
+          <img
+            class="slider__img"
+            src="img/about/pes.jpg"
+            alt="Stats after PES game"
+          />
+        </div>
+
+        <div class="slider__slide">
+          <img
+            class="slider__img"
+            src="img/about/moto.jpg"
+            alt="My motorcycle Suzuki K4"
+          />
+        </div>
+      </div>
+
+      <div class="slider__arrow slider__arrow--left"></div>
+      <div class="slider__arrow slider__arrow--right"></div>
+
+      <p class="slider__text slider__text--ch">
+        Something about that sport from the button
+      </p>
+      <p class="slider__text slider__text--nch">
+        There are few more activities that I didn't mention here, like playing
+        football, swimming, cycling, bodyweight exercises.
+      </p>
+    </div>
+    <!-- PROJECTS -->
+    <div class="main main--3" id="projects" style="display: none">
+      <div class="project">
+        <h4 class="heading4">Mt-Electro</h4>
+        <img
+          src="img/projects/mt-elektro.JPG"
+          class="project__img"
+          alt="Mt-Electro homepage screenshot"
+        />
+        <p class="project__text">
+          My first website which I created for my friend who runs white goods
+          service in Belgrade.
+        </p>
+        <a
+          href="https://www.mt-elektro.rs/"
+          target="_blank"
+          class="project__link btn"
+          >Go to site</a
+        >
+      </div>
+
+      <div class="project project--coming">
+        <div class="commingSoon">Coming soon</div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+  </body>
+</html>

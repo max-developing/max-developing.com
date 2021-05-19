@@ -1,0 +1,151 @@
+:root {
+  --color-primary: #fff;
+  --color-help: #f00000;
+  // --color-yellow: #fff200;
+  --color-secondary: #24fe41;
+
+  --color-linear-g-1: #000000;
+  --color-linear-g-2: #414345;
+
+  --color-primary-light: #f8f8ff;
+  --color-dark: #2f3640; // electromagnetic
+  // --color-yellow: #fff200;
+
+  --color-green: #24fe41;
+  --color-green2: #66ff00;
+  --color-green3: #80ff00;
+  --color-green4: #86fb4c;
+  --color-green5: #4cd137;
+
+  --color-light: #f5f6fa;
+  --color-light2: #faf9f9;
+  --color-light3: #f4f2f2;
+  --color-light4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
+  /*
+  #a8ff78
+  #78ffd6
+  #00F260
+  #0f9b0f
+  #34e89e
+  #0f3443
+
+#52c234
+#0be881 // minty green
+#32ff7e // winter green
+#3ae374 // weird green
+
+#16A085
+#F4D03F
+  
+#75D701
+#F8F8FF
+#56A902
+#3B4E32 
+*/
+}
+
+$bp-largest: 87.5em; // 1400px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 60%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 59%;
+  }
+
+  @media only screen and (min-width: $bp-largest) {
+    font-size: 65%;
+  }
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-primary);
+  background: linear-gradient(
+    45deg,
+    var(--color-linear-g-1),
+    var(--color-linear-g-2)
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+// USEFUL FOR LONGER PARAGRAPHS IN ORDER TO MAKE THEM READABLE
+// p {
+//   width: clamp(45ch, 50%, 75ch);
+// }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns:
+    [sidebar-start] minmax(8rem, min-content) [sidebar-end full-start] minmax(
+      6rem,
+      1fr
+    )
+    [center-start] repeat(4, [col-start] minmax(min-content, 22rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+// This is also speciied in home.scss
+.heading2 {
+  font-size: 3rem;
+  font-weight: 100;
+  font-style: italic;
+}
+// This is also speciied in projects.scss
+.heading4 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .container {
+    grid-template-rows: 10vh calc(100% - 10vh);
+    grid-template-columns:
+      minmax(6rem, 1fr)
+      repeat(4, minmax(min-content, 22rem))
+      minmax(6rem, 1fr);
+  }
+
+  .heading2 {
+    font-size: 2.5rem;
+  }
+}
